@@ -40,3 +40,12 @@ let listItem = document.querySelector('#li')
           listTarefas.removeChild(listTarefas.firstChild);
         }
     })
+    clearDoneListButton = document.querySelector('#remover-finalizados')
+    clearDoneListButton.addEventListener('click', () => {
+        document.querySelectorAll('li').forEach(function (doneList) {
+          if (doneList.classList.contains('completed')) {
+            doneList.remove();
+          }
+        });
+      });
+      
