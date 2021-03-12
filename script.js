@@ -16,10 +16,7 @@ let listItem = document.querySelector('#li')
     }    
     });
   
- /*  listTarefas.addEventListener('click',function (event){      
-    const listTarefas = event.target
-        evento.target.classList.add('cinza')      
-  })  */
+
     listTarefas.addEventListener('dblclick',function(completed){
     const listTarefas = completed.target;
     if (listTarefas.style.textDecoration === 'line-through') {
@@ -47,15 +44,14 @@ let listItem = document.querySelector('#li')
     for(let index = 0;index < arrListItem.length;index +=1){
       arrListItem[index].style.backgroundColor = 'white'
     } 
-    //event.target.classList.add('.cinza')
-    event.target.style.backgroundColor='rgb(128, 128, 128)'   
+    event.target.style.backgroundColor ='rgb(128, 128, 128)'   
   })
  
-let clearListButton=document.getElementById('apaga-tudo');
-cleanButton.addEventListener('click',function (){
+ let clearListButton = document.getElementById('apaga-tudo');
+ clearListButton.addEventListener('click',function (){
     let array=document.querySelectorAll('li')
     for(let index=0;index<array.length;index+=1){
         listTarefas.removeChild(array[index])
     }
-  });
+  })
 
