@@ -14,7 +14,7 @@ let listItem = document.querySelector('#li')
         listTarefas.insertBefore(li,listTarefas.appendChild(li))
         input.value = "";   
     }    
-  });
+    });
   
  /*  listTarefas.addEventListener('click',function (event){      
     const listTarefas = event.target
@@ -31,12 +31,7 @@ let listItem = document.querySelector('#li')
       }
     });
 
-    clearListButton = document.querySelector('#apaga-tudo')
-    clearListButton.addEventListener('click', function () {          
-         while (listTarefas.hasChildNodes()) {
-          listTarefas.removeChild(listTarefas.firstChild);
-        }
-    })
+
     clearDoneListButton = document.querySelector('#remover-finalizados')
     clearDoneListButton.addEventListener('click', () => {
         document.querySelectorAll('li').forEach(function (removerFinalizados) {
@@ -45,3 +40,22 @@ let listItem = document.querySelector('#li')
           }
         });
       });
+
+
+ listTarefas.addEventListener('click',function (event){
+  let arrListItem = document.querySelectorAll('li')
+    for(let index = 0;index < arrListItem.length;index +=1){
+      arrListItem[index].style.backgroundColor = 'white'
+    } 
+    //event.target.classList.add('.cinza')
+    event.target.style.backgroundColor='rgb(128, 128, 128)'   
+  })
+ 
+let clearListButton=document.getElementById('apaga-tudo');
+cleanButton.addEventListener('click',function (){
+    let array=document.querySelectorAll('li')
+    for(let index=0;index<array.length;index+=1){
+        listTarefas.removeChild(array[index])
+    }
+  });
+
