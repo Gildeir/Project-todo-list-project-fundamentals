@@ -33,3 +33,16 @@ let listItem = document.querySelector('#li')
         listTarefas.classList.add ('completed');
       }
     });
+
+    //clearListButton = document.querySelector('#apagar-tudo')
+    clearListButton.addEventListener('click', function () {          
+         while (listTarefas.hasChildNodes()) {
+          listTarefas.removeChild(listTarefas.firstChild);
+        }
+     
+      
+
+    
+    
+    
+    })
