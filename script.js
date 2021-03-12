@@ -34,15 +34,9 @@ let listItem = document.querySelector('#li')
       }
     });
 
-    //clearListButton = document.querySelector('#apagar-tudo')
+    clearListButton = document.querySelector('#apagar-tudo')
     clearListButton.addEventListener('click', function () {          
          while (listTarefas.hasChildNodes()) {
           listTarefas.removeChild(listTarefas.firstChild);
         }
-     
-      
-
-    
-    
-    
     })
