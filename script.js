@@ -20,10 +20,7 @@ let listItem = document.querySelector('#li')
     const listTarefas = event.target
         evento.target.classList.add('cinza')      
   })  */
-  
-  
-  
-  listTarefas.addEventListener('dblclick',function(completed){
+    listTarefas.addEventListener('dblclick',function(completed){
     const listTarefas = completed.target;
     if (listTarefas.style.textDecoration === 'line-through') {
         listTarefas.style.textDecoration = 'none';
@@ -48,4 +45,3 @@ let listItem = document.querySelector('#li')
           }
         });
       });
-      
