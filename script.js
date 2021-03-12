@@ -31,7 +31,7 @@ let listItem = document.querySelector('#li')
       }
     });
 
-    clearListButton = document.querySelector('#apagar-tudo')
+    clearListButton = document.querySelector('#apaga-tudo')
     clearListButton.addEventListener('click', function () {          
          while (listTarefas.hasChildNodes()) {
           listTarefas.removeChild(listTarefas.firstChild);
@@ -39,9 +39,9 @@ let listItem = document.querySelector('#li')
     })
     clearDoneListButton = document.querySelector('#remover-finalizados')
     clearDoneListButton.addEventListener('click', () => {
-        document.querySelectorAll('li').forEach(function (doneList) {
-          if (doneList.classList.contains('completed')) {
-            doneList.remove();
+        document.querySelectorAll('li').forEach(function (removerFinalizados) {
+          if (removerFinalizados.classList.contains('completed')) {
+            removerFinalizados.remove();
           }
         });
       });
