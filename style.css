@@ -1,4 +1,16 @@
-ol :hover{
-    background-color: green;
+.cinza {
+  background-color: green;
+};
 
+.completed {
+  text-decoration-line: line-through;
+}
+
+
+button{
+    cursor: pointer;
+}
+
+p{
+   
 }
